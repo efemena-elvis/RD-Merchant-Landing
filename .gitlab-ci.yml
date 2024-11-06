@@ -1,0 +1,58 @@
+image: node:latest
+
+stages:
+  - install
+  - build
+  - deploy
+
+# Job for installing dependencies
+install:
+  stage: install
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@latest-9 --activate
+    - pnpm config set store-dir .pnpm-store
+  script:
+    - pnpm install
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store
+  only:
+    - main
+
+# Job for building on production environment (Static Site)
+build_production:
+  stage: build
+  script:
+    - pnpm generate
+  artifacts:
+    paths:
+      - .output/public/
+  only:
+    - main
+  needs:
+    - install
+
+# Job for deploying to production
+deploy_production:
+  image:
+    name: amazon/aws-cli:latest
+    entrypoint:
+      - "/usr/bin/env"
+  stage: deploy
+  script:
+    - echo "Deploying to Production Environment"
+    - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile gitlab
+    - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile gitlab
+    - aws configure set region $MAIN_AWS_DEFAULT_REGION --profile gitlab
+    - aws s3 sync .output/public/ s3://$MAIN_S3_BUCKET/ --acl public-read --delete --region $MAIN_AWS_DEFAULT_REGION --profile gitlab
+    - aws cloudfront create-invalidation --distribution-id $MAIN_CLOUDFRONT_DISTRIBUTION --paths "/*" --profile gitlab
+  environment:
+    name: production
+  only:
+    - main
+  needs:
+    - build_production
