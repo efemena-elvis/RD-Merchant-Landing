@@ -1,13 +1,13 @@
 <template>
-  <div class="bg-background py-20">
+  <div class="bg-background py-20 scroll-mt-[70px]" id="why-redstone">
     <div
       class="container flex flex-col lg:flex-row gap-[69px] lg:gap-[59px] md:items-stretch md:justify-between"
     >
       <div class="space-y-[32px] max-w-[297px] order-2 lg:order-1">
         <div
-          class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center"
+          class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center ring-2 ring-[#D5DDDC]"
         >
-          <LockIcon />
+          <GuardIcon />
         </div>
         <div class="space-y-[24px]">
           <h4
@@ -41,9 +41,9 @@
       <div class="space-y-[69px] lg:space-y-[147px] order-3">
         <div class="space-y-[32px] max-w-[297px]">
           <div
-            class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center"
+            class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center ring-2 ring-[#D5DDDC]"
           >
-            <FlexibleIcon />
+            <WalletFlowIcon />
           </div>
           <div class="space-y-[24px]">
             <h4
@@ -58,9 +58,9 @@
         </div>
         <div class="space-y-[32px] max-w-[297px]">
           <div
-            class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center"
+            class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center ring-2 ring-[#D5DDDC]"
           >
-            <SeamlessIcon />
+            <LoopIcon />
           </div>
           <div class="space-y-[24px]">
             <h4
@@ -79,7 +79,7 @@
 </template>
 
 <script lang="ts" setup>
-import LockIcon from "@/assets/svgs/lock.svg";
-import FlexibleIcon from "@/assets/svgs/flexible.svg";
-import SeamlessIcon from "@/assets/svgs/seamless.svg";
+import GuardIcon from "@/assets/svgs/guard.svg";
+import WalletFlowIcon from "@/assets/svgs/wallet-flow.svg";
+import LoopIcon from "@/assets/svgs/loop.svg";
 </script>

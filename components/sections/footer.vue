@@ -37,20 +37,22 @@
           </div>
         </div>
         <div class="space-y-6">
+          <div class="">Product</div>
           <NuxtLink
             class="text-muted-foreground block hover:text-primary transition-colors hover:underline"
-            to="/"
+            to="/privacy-policy"
           >
             Privacy poilcy
           </NuxtLink>
           <NuxtLink
             class="text-muted-foreground block hover:text-primary transition-colors hover:underline"
-            to="/"
+            to="/terms"
           >
             Terms of use
           </NuxtLink>
         </div>
         <div class="space-y-6">
+          <div class="">Company</div>
           <p class="text-muted-foreground">Contact</p>
           <p class="text-muted-foreground">
             4 Bishops Rd, Kabulonga Lusaka, Zambia
@@ -59,7 +61,9 @@
       </div>
       <NuxtImg src="/images/RedStone.png" class="w-full" />
     </div>
-    <div class="px-6 py-4 flex justify-center items-center text-[#C1C9C8]">
+    <div
+      class="px-6 py-4 flex justify-center items-center text-[#C1C9C8] border-t"
+    >
       <div>Copyright {{ new Date().getFullYear() }}. Red Stone Zambia Ltd.</div>
     </div>
   </div>
@@ -71,5 +75,4 @@ import FacebookIcon from "@/assets/svgs/facebook.svg";
 import TwitterIcon from "@/assets/svgs/twitter.svg";
 import LinkedinIcon from "@/assets/svgs/linkedin.svg";
 import InstagramIcon from "@/assets/svgs/instagram.svg";
-import Button from "../shared/button.vue";
 </script>

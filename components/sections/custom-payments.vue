@@ -1,52 +1,68 @@
 <template>
-  <div class="bg-background py-[100px] md:py-[170px]">
+  <div
+    class="bg-foreground text-background pt-[71px] pb-[119px] scroll-mt-20"
+    id="payments"
+  >
     <div class="container">
-      <div
-        class="bg-foreground text-background px-[30px] md:px-[50px] py-[31px] md:py-[41px] rounded-3xl grid md:grid-cols-[361px_1fr] gap-[70px] relative"
-      >
+      <div class="space-y-6 max-w-[835px]">
         <h1
-          class="text-[40px] leading-[56px] md:text-[48px] md:leading-[66px] font-roobert-semibold font-semibold"
+          class="text-[48px] leading-[66px] font-semi-bold font-roobert-semibold"
         >
-          Customise your <span class="text-[#4ABFF9]">payments</span>
+          Create Custom Payment Experiences with Our Comprehensive APIs
         </h1>
+        <p class="text-xl text-muted-foreground">
+          Our well detailed, well-documented APIs enable you to create your
+          financial solutions serving hundreds of thousands of users.
+        </p>
+      </div>
+      <div
+        class="mt-[70px] grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-[50px]"
+      >
         <div
-          class="grid grid-cols-[repeat(auto-fit,_minmax(269px,_1fr))] gap-[70px]"
+          class="space-y-[70px]"
+          v-for="option in payment_options"
+          :key="option.title"
         >
           <div
-            class="space-y-2 relative z-10"
-            v-for="option in payment_options"
-            :key="option.title"
+            class="grid place-items-center size-[70px] rounded-full bg-background"
           >
-            <h3 class="text-2xl font-roobert-medium font-medium">
+            <component :is="option.icon" />
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-roobert-semibold font-semibold text-2xl">
               {{ option.title }}
             </h3>
-            <p class="text-[20px] leading-[28px] text-muted-foreground">
+            <p class="text-xl text-muted-foreground">
               {{ option.description }}
             </p>
           </div>
         </div>
-        <NuxtImg src="/images/Cogs.png" class="absolute right-0 bottom-0" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import FileIcon from "@/assets/svgs/file.svg";
+import FlowIcon from "@/assets/svgs/flow.svg";
+import WalletIcon from "@/assets/svgs/wallet.svg";
+
 const payment_options = ref([
   {
-    title: "Web SDKs",
+    title: "Access transaction data",
     description:
-      "Flexible web payment solutions for a seamless customer experience.",
+      "Retrieve and manage all your transaction and customer information effortlessly.",
+    icon: markRaw(FileIcon),
   },
   {
-    title: "API integration",
-    description:
-      "Robust API for customizable payment links and checkout pages.",
+    title: "Seamlessly accept payment",
+    description: "Easily integrate payment solutions into your app or website.",
+    icon: markRaw(WalletIcon),
   },
   {
-    title: "Mobile SDKs",
-    description:
-      "Comprehensive payment options for cards, bank transfers, and mobile money.",
+    title: "Multiple payment option",
+    description: "More than one payment option for your customers",
+    icon: markRaw(FlowIcon),
   },
 ]);
 </script>

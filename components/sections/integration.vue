@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#F5F6F7] py-12">
+  <div class="bg-[#F5F6F7] py-12 scroll-mt-[120px]" id="developers">
     <div class="container grid md:grid-cols-[1fr_1fr] gap-[74px] items-center">
       <div>
         <h1

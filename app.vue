@@ -6,10 +6,12 @@
     <div class="pt-20">
       <NuxtPage />
     </div>
+    <Footer />
   </div>
 </template>
 
 <script lang="ts" setup>
+import Footer from "@/components/sections/footer.vue";
 useSeoMeta({
   titleTemplate: "Redstone | %s",
 });
