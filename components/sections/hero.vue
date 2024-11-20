@@ -7,7 +7,7 @@
         Simplified Payments For Your Business
       </h1>
       <p class="text-muted-foreground font-light text-xl mt-6">
-        Nowcash makes payment collection and settlement  simple and reliable.
+        RedStone makes payment collection and settlement simple and reliable.
       </p>
       <div
         class="flex gap-x-4 justify-center md:justify-start items-center mt-10"
