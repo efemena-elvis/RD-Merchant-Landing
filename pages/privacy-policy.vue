@@ -379,7 +379,7 @@ useSeoMeta({
 });
 </script>
 
-<style>
+<style scoped>
 .heading {
   @apply text-[32px] leading-[39px] font-roobert-bold font-bold;
 }

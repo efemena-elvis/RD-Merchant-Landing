@@ -16,7 +16,7 @@
             completed the on-line application process on our secure customer
             website (the Redstone platform).
           </p>
-          <p>
+          <p class="subtitle">
             These Terms apply in full force and effect to your use of the
             Services and by using any of the Services, you expressly accept all
             terms and conditions contained herein in full and without limitation
@@ -235,7 +235,7 @@ useSeoMeta({
 });
 </script>
 
-<style>
+<style scoped>
 .heading {
   @apply text-[32px] leading-[39px] font-roobert-bold font-bold;
 }
