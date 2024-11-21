@@ -1,366 +1,228 @@
 <template>
-  <div class="container mt-[120px] max-w-[954px]">
+  <div class="container pb-10 mt-[120px] max-w-[954px]">
     <div>
       <h1
         class="text-[72px] leading-[82px] font-roobert-bold font-bold text-center mb-[60px]"
       >
-        Privacy Policy
+        Terms of Use
       </h1>
-      <p class="text-xl text-[#525857]">
-        This Privacy Policy describes your privacy rights regarding Redstone
-        (“we”, “us” or “our”) collection, use, storage, sharing and protection
-        of your personal information. It applies to our website, APIs, services
-        and tools regardless of how you access or use them. This Privacy Policy
-        will help you understand how we use your information and what we do with
-        it. We respect the privacy of our online visitors and registered users
-        (“Users”) as such we will take reasonable steps to protect your
-        information at all times.
-      </p>
 
       <div class="space-y-8 mt-[88px]">
         <div class="space-y-4">
-          <h1 class="heading">1. About Us</h1>
+          <h1 class="heading">Introduction</h1>
           <p class="subtitle">
-            The Redstone Payment Services Terms set out the agreement between us
-            Redstone Zambia Limited, Zambia, and you, the person who has
+            This Redstone Payment Services Terms set out the agreement between
+            us Redstone Zambia Limited, Zambia and you, the person who has
             completed the on-line application process on our secure customer
-            website (the Vesicash platform).
+            website (the Redstone platform).
+          </p>
+          <p>
+            These Terms apply in full force and effect to your use of the
+            Services and by using any of the Services, you expressly accept all
+            terms and conditions contained herein in full and without limitation
+            or qualification, including our Privacy Notice. You must not use any
+            of the Services, if you have any objection to any of these Terms.
           </p>
         </div>
 
         <div class="space-y-4">
-          <h1 class="heading">2. Changes to Redstone privacy policy</h1>
+          <h1 class="heading">Our Company Information</h1>
           <p class="subtitle">
-            We may decide to change our privacy policy as our technology and
-            service evolves and our users will be notified via this page or any
-            means available to reach our users. Redstone reserves the right to
-            update, modify or amend this as may be deemed required at any time
-            in the future.
+            We are Redstone Zambia Limited; a company registered under the laws
+            of the Republic of Zambia. Our registered office is at 4 Bishops Rd,
+            Kabulonga Lusaka, Zambia.
           </p>
         </div>
 
         <div class="space-y-4">
-          <h1 class="heading">3. Personal information that we collect</h1>
+          <h1 class="heading">Who May Use Our Services?</h1>
           <p class="subtitle">
-            To have access to the Redstone platform and services, it requires
-            you to have a Redstone account. When you register for the Redstone
-            account, you voluntarily supply us with some personal information
-            which we collect by lawful means.
+            You may use the Services only if you agree to form a binding
+            contract with Redstone and are not a person barred from receiving
+            services under the laws of the applicable jurisdiction. If you are
+            accepting these Terms and using the Services on behalf of a company,
+            business, or organization, you represent and warrant that you are
+            authorized to do so.
           </p>
         </div>
-      </div>
 
-      <div data-v-183eb0ab="" class="content-text margin-32">
-        <div data-v-183eb0ab="" class="margin-32"></div>
-        <ul data-v-183eb0ab="">
-          <div data-v-183eb0ab="" class="sub-title-text">
-            3.1. Personal Data You Provide Directly
-          </div>
-          <div data-v-183eb0ab="" class="content-text margin-24">
-            We collect personal data you provide to us. For example:
-          </div>
-          <ul data-v-183eb0ab="">
-            <li data-v-183eb0ab="" class="margin-24">
-              Contact information. As part of our operations, Redstone may
-              collect information such as your name, telephone number, email
-              address, address, etc. to provide you with certain services.
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Payment information. If you make a purchase or other financial
-              transaction, such as when you checkout with Redstone on a
-              Merchant’s website, we collect credit card numbers, financial
-              account information, and other payment details.
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Communications. If you contact us directly, for example, with an
-              inquiry or a support request, we may receive additional personal
-              data about you, including your email address and the content of
-              your communications.
-            </li>
-          </ul>
-        </ul>
-        <ul data-v-183eb0ab="">
-          <div data-v-183eb0ab="" class="sub-title-text">
-            3.2. Personal Data We Collect Automatically
-          </div>
-          <ul data-v-183eb0ab="">
-            <li data-v-183eb0ab="" class="margin-24">
-              Device Information. We receive information about the device and
-              software you use to access our Services, including Internet
-              Protocol (IP) address, web browser type, operating system version,
-              and device identifiers.
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Usage Information. To help us understand how you use our Services,
-              including the Demo portion of our website, and to help us improve
-              them, we automatically receive information about your interactions
-              with our Services. This information includes records of your
-              transactions and information about your other activities related
-              to our services, such as the date and time of your sessions, the
-              pages you view, links to/from any page, and time spent in a
-              session. Some of the data we gather through cookies and similar
-              technologies as discussed below.
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Location Information. We may collect or infer your general
-              location information when you use our Services. For example, your
-              IP address may indicate your general geographic region, which will
-              be matched against our IP whitelist.
-            </li>
-          </ul>
-        </ul>
-        <ul data-v-183eb0ab="">
-          <div data-v-183eb0ab="" class="sub-title-text">
-            3.3. Personal Data That We Receive from Others
-          </div>
-          <ul data-v-183eb0ab="">
-            <li data-v-183eb0ab="" class="margin-24">
-              Partners. We may retrieve additional personal data about you from
-              third parties and other identification/verification services, such
-              as your financial institution and payment processor. We may
-              combine that data with other information we have about you.
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Publicly available sources. We may also gather additional data
-              about you from public sources of information, such as open
-              government databases.
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Inferences. We may infer additional Personal Data based on the
-              Personal Data described above. For example, we may infer your
-              interests for website visitors based on the web pages you view.
-            </li>
-          </ul>
-        </ul>
-        <div data-v-183eb0ab="" class="margin-32">
-          When you are asked to provide personal data, you may decline. And you
-          may use web browser or operating system controls to prevent certain
-          types of automatic data collection. But if you choose not to provide
-          or allow information necessary for certain services or features, those
-          services or features may not be available or fully functional.
+        <div class="space-y-4">
+          <h1 class="heading">Age Restriction</h1>
+          <p class="subtitle">
+            Our website and Services are directed to people from the ages of 18
+            and above. You are only permitted to use the Services if you are
+            aged 18 or older. We do not knowingly engage people younger than the
+            age of 18.
+          </p>
         </div>
-        <div data-v-183eb0ab="" class="margin-32">
-          Marketing and Communications information includes your preferences in
-          receiving marketing from us and our third parties and your
-          communication preferences.
+
+        <div class="space-y-4">
+          <h1 class="heading">License to Use Our Website</h1>
+          <p class="subtitle">
+            We grant you a non-assignable, non-exclusive and revocable license
+            to use the software provided as part of our Services in the manner
+            permitted by these Terms. This license grant includes all updates,
+            upgrades, new versions and replacement software for your use in
+            connection with our Services.
+          </p>
+          <p class="subtitle">
+            Any feedback, comments, or suggestions you may provide to us and our
+            Services is entirely voluntary and we will be free to use such
+            feedback, comments or suggestions as we see fit without any
+            obligation to you.
+          </p>
         </div>
-      </div>
-      <div data-v-183eb0ab="" class="title-text">
-        4. How We Use Your Personal Information
-      </div>
-      <div data-v-183eb0ab="" class="content-text">
-        <div data-v-183eb0ab="" class="margin-24">
-          We may process your personal data for a variety of reasons that are
-          justified and are allowed under data protection laws in Zambia which
-          forms the legal basis on how we process your personal data. Most
-          commonly, we will use your personal data in the following
-          circumstances:
+
+        <div class="space-y-4">
+          <h1 class="heading">Information Security and Warranty Disclaimer</h1>
+          <p class="subtitle">
+            You are responsible for configuring your information technology,
+            computer programmes and platform in order to access our Services.
+            Please ensure you use your virus protection software or application
+            as we cannot guarantee that our Services will be free from viruses
+            or bugs.
+          </p>
+          <p class="subtitle">
+            You must not attempt to gain unauthorized access to our Services,
+            computers or databases. You must not misuse our Services by
+            introducing trojans, viruses or other materials which are malicious
+            or technologically harmful.
+          </p>
         </div>
-        <ul data-v-183eb0ab="">
-          <li data-v-183eb0ab="" class="margin-24">
-            To operate the website(s) and provide the Services to you and other
-            Redstone Users including:
-          </li>
-          <ul data-v-183eb0ab="">
-            <li data-v-183eb0ab="" class="margin-24">
-              Send, request, fund and authenticate a payment transaction and
-              payment order (as defined in our Customer Agreements);
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Communicate with you about the Services, the website(s), or
-              Vesicash;
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Create an account connection between your account under the
-              Customer Agreements and a third party account, platform or
-              financial institution;
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Create an account connection between your account under the
-              Customer Agreements and a third party account, platform or
-              financial institution;
-            </li>
-          </ul>
-          <li data-v-183eb0ab="" class="margin-24">
-            To manage our business needs, such as monitoring, analyzing,
-            protecting the integrity and improving the Services offered and
-            supplied to you and other Redstone users, and improving the Services
-            and the website(s) performance and functionality. For example we
-            analyze Redstone User behavior and interaction and perform research
-            about the way you use our website(s) and our Services;
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            To manage risk and protect you and other Redstone Users from
-            financial crime, for example by verifying your identity, banking,
-            payment and other financial details, products and goods subject to
-            any transaction(s) and helping to detect and prevent financial
-            crime, attacks and abuse of our website(s) and Services;
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            To comply with our obligations and to enforce the legal agreements
-            relating to the use of our website(s) and the Services, including to
-            comply with all applicable local and international laws and
-            regulations;
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            For our legitimate interests including:
-          </li>
-          <ul data-v-183eb0ab="">
-            <li data-v-183eb0ab="" class="margin-24">
-              Allowing us, other third parties and legal enforcement bodies who
-              have a legitimate interest, to enforce the legal agreements
-              relating to our website(s) and our Services;
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Manage our everyday business needs, such as managing risk,
-              analyzing, monitoring and protecting Redstone, you and other
-              Redstone Users;
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Anonymise personal data in order to provide Aggregated Data to
-              third parties, including other businesses and members of the
-              public, as well as for own use, about how, when, and why Redstone
-              Users visit our website(s) or use our Services;
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Where it is necessary for ourselves or those of a third party and
-              your interest and fundamental rights not to override such
-              legitimate interests;
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              Where we need to comply with legal and regulatory obligations.
-            </li>
-          </ul>
-        </ul>
-        <ul data-v-183eb0ab=""></ul>
-      </div>
-      <div data-v-183eb0ab="" class="title-text">
-        5. Disclosure of personal data
-      </div>
-      <div data-v-183eb0ab="" class="content-text">
-        <div data-v-183eb0ab="" class="margin-24">
-          Redstone does not sell, trade or rent personal data to anyone.
-          Further, we will not share or disclose your data with or to a third
-          party without your consent except as necessary to provide the Services
-          or as described in this Privacy Policy.
+
+        <div class="space-y-4">
+          <h1 class="heading">Indemnification</h1>
+          <p class="subtitle">
+            You hereby indemnify Redstone and undertake to keep Redstone, its
+            staff and affiliates indemnified against any losses, damages, costs,
+            liabilities and expenses (including without limitation reasonable
+            legal fees and expenses) arising out of any breach by you of any
+            provision of these Terms, or arising out of any claim that you have
+            breached any provision of these Terms. You will indemnify and hold
+            Redstoe harmless from and against any claim, suit or proceedings
+            brought against Redstone arising from or in connection with
+            violations of intellectual property or other rights of third parties
+            in relation to your use of the Services.
+          </p>
         </div>
-        <ul data-v-183eb0ab="">
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600">Merchants.</span>
-            We may share your contact information with merchants as part of your
-            purchase details for record purposes. We will not share this
-            information with other third parties except as a necessary part of
-            providing our website and services. We do not share your card
-            information with merchants. Please review your merchant’s privacy
-            policy to understand the privacy policies guiding the merchant you
-            transact with.
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600"
-              >Service providers.</span
-            >
-            We share personal data with vendors or agents working on our behalf
-            for the purposes described in this statement. For example, companies
-            we've hired to provide customer service support, to protect and
-            secure our systems and services, or to perform sanctions screening
-            and identity verification services may need access to personal data
-            to provide those functions. The processing by such third parties
-            shall be governed by a written contract with Redstone to ensure
-            adequate protection and security measures are put in place for the
-            protection of personal data in accordance with the terms of this
-            Privacy Policy.
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600"
-              >Financial services &amp; payment processing.</span
-            >
-            When you provide payment data, for example, to make a purchase, we
-            will share payment and transactional data with banks and other
-            entities as necessary for payment processing, fraud prevention,
-            credit risk reduction, or other related financial services.
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600">Affiliates.</span>
-            We enable access to personal data across our subsidiaries,
-            affiliates, and related companies, for example, where we share
-            common data systems or where access is needed to provide services
-            and operate our business.
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600">Partners.</span> We may
-            share your data with companies we partner with for industry
-            networking events, mixers, and other learning and development
-            opportunities, but only with your explicit consent and with the
-            option to opt out.
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600"
-              >Corporate transactions.</span
-            >
-            We may disclose personal data as part of a corporate transaction or
-            proceeding such as a merger, financing, acquisition, bankruptcy,
-            dissolution, transfer, divestiture, or sale of all or a portion of
-            our business or assets.
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600"
-              >Legal and law enforcement.</span
-            >
-            We may access, disclose, and preserve personal data in accordance
-            with applicable law and when we believe that doing so is necessary
-            to comply with applicable law or respond to valid legal processes,
-            including from law enforcement or other government agencies.
-          </li>
-          <li data-v-183eb0ab="" class="margin-24">
-            <span data-v-183eb0ab="" class="roobert-600"
-              >Security, safety, and protecting rights.</span
-            >
-            We will disclose personal data if we believe it is necessary to:
-          </li>
-          <ul data-v-183eb0ab="">
-            <li data-v-183eb0ab="" class="margin-24">
-              protect our Users and others, for example, to prevent fraud or to
-              help prevent the loss of life or serious injury of anyone;
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              operate and maintain the security of our services, including to
-              prevent or stop an attack on our computer systems or networks; or
-            </li>
-            <li data-v-183eb0ab="" class="margin-24">
-              protect the rights or property or ourselves or others, including
-              enforcing our agreements, terms, and policies.
-            </li>
-          </ul>
-        </ul>
-        <div data-v-183eb0ab="" class="margin-24">
-          We leverage third-party analytics to analyze personal data collected
-          through our website and apps, including account information, marketing
-          and communications data, demographic data, content and files,
-          geolocation data, usage data, and inferences associated with
-          identifiers and device information (such as cookie IDs, device IDs,
-          and IP address) as described in the Cookies section of this statement.
-          This data is aggregated and enables us to perform analytics and track
-          the performance of our website. For example, we use Google Analytics
-          on our website to help us understand how users interact with our
-          website; you can learn how Google collects and uses information at
-          <a data-v-183eb0ab="" href="http://www.google.com/policies/privacy/"
-            >www.google.com/policies/privacy/</a
-          >
-          partners.
+
+        <div class="space-y-4">
+          <h1 class="heading">Breach of these Terms</h1>
+          <p class="subtitle">
+            Without prejudice to Redstone’s other rights under these Terms, if
+            you breach these Terms in any way, Redstone may take such action as
+            Redstone deems appropriate to deal with the breach, including
+            suspending your access to the website, prohibiting you from
+            accessing the website, blocking computers using your IP address from
+            accessing the website, contacting your internet service provider
+            requesting that your access to the website be blocked and/or
+            bringing court proceedings against you.
+          </p>
         </div>
-        <div data-v-183eb0ab="" class="margin-24">
-          Finally, we may share de-identified information in accordance with
-          applicable law.
+
+        <div class="space-y-4">
+          <h1 class="heading">Cookies</h1>
+          <p class="subtitle">
+            Like many other websites, we use cookies to identify you as a user
+            and to customize and improve our Services. A cookie is a small data
+            file that is transferred to your computer or mobile device. It
+            enables us to remember your account log-in information, IP
+            addresses, web traffic, number of times you visit, date and time of
+            visits. Please refer to our Cookies Notice for more information.
+          </p>
+          <p class="subtitle">
+            Some browsers may automatically accept cookies, while some can be
+            modified to decline cookies or alert you when a website wants to
+            place a cookie on your computer. If you do choose to disable
+            cookies, it may limit your ability to use our website.
+          </p>
         </div>
-        <div data-v-183eb0ab="" class="margin-24">
-          Please note that merchants, sellers, and other Users you buy from or
-          contract with have their respective privacy policies, and although
-          Redstone’s Merchant Terms of Use does not allow the other transacting
-          party to use your information for anything other than as authorized by
-          you, Paystack is not responsible for their actions, including their
-          data protection practices. If you provide personal data to any of
-          those third parties or allow us to share personal data with them, that
-          data is governed by their privacy policies.
+
+        <div class="space-y-4">
+          <h1 class="heading">Data Privacy and Protection</h1>
+          <p class="subtitle">
+            Redstone recognizes the importance of protecting the privacy of
+            those who visit and choose to use the Flutterwave Services. Redstone
+            remains compliant with the Payment Card Industry Data Security
+            Standard (PCI/DSS) requirement to the extent applicable. Please note
+            that such requirements may be amended from time to time. With
+            respect to all the Personal Information belonging to, and/or
+            processed in connection with Redstone or this website, such Personal
+            Information at all times are in compliance with all Data Protection
+            Laws in the territory, in all respects and all applicable data
+            protection regulation in force. Redstone maintains a Privacy Notice
+            which provides an overview of the Personal Information we collect
+            about you or that you provide to us. By using the Redstone Services,
+            you consent to such processing and you warrant to provide accurate
+            information.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <h1 class="heading">Govering Law</h1>
+          <p class="subtitle">
+            These Terms shall be interpreted and governed in accordance with the
+            Laws of the Republic of Zambia and you submit to the non-exclusive
+            jurisdiction of the Courts located in Zambia for the resolution of
+            any dispute.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <h1 class="heading">Termination</h1>
+          <p class="subtitle">
+            You may terminate your agreement with Redstone ceasing to use
+            Redstone Services. We may suspend or terminate our Services to you
+            at any time, for any reason including without limitation, breach of
+            these Terms, fraud, impersonation, etc.
+          </p>
+          <p class="subtitle">
+            Upon termination, your right to use the Redstone Services or
+            platform will immediately cease.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <h1 class="heading">Changes to the Redstone Terms of Use</h1>
+          <p class="subtitle">
+            Redstone reserves the right to change, revise or modify these Terms
+            from time to time by updating this page. The changes will not be
+            retroactive, and the most current version of the Terms which will
+            always be on this page will continue to govern our relationship with
+            you. We will also endeavor to notify you of any material changes
+            which could be done via email associated with your account or
+            service notification. By continuing to use our Services after the
+            changes become effective, you agree to be bound by the revised
+            Terms.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <h1 class="heading">General</h1>
+          <p class="subtitle">
+            These Terms supersede and extinguish all previous agreements between
+            you and Redstone whether written or oral, relating to its subject
+            matter. In the event that any of these Terms is held to be invalid
+            or unenforceable, then that provision will be limited or eliminated
+            to the minimum extent necessary, and the remaining provisions of
+            these Terms will remain subsisting and in full effect. Redstone’s
+            failure to enforce any right or provision of these Terms will not be
+            deemed a waiver of such right or provision.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <h1 class="heading">Complaints</h1>
+          <p class="subtitle">
+            If you have any complaints about us and our Services, you may
+            contact us at
+            <a
+              href="mailto:hello@redstonepgs.com
+            "
+              class="text-primary/80 hover:text-primary"
+              >hello@redstonepgs.com
+            </a>
+          </p>
         </div>
       </div>
     </div>
@@ -377,7 +239,16 @@ useSeoMeta({
 .heading {
   @apply text-[32px] leading-[39px] font-roobert-bold font-bold;
 }
+
+.sub-heading {
+  @apply text-xl font-roobert-bold font-bold;
+}
+
 .subtitle {
-  @apply text-xl text-[#525857];
+  @apply text-[20px] text-[#525857] !leading-[34px];
+}
+
+ul.list-circle {
+  list-style-type: circle;
 }
 </style>
