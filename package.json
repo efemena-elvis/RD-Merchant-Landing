@@ -7,10 +7,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
+    "@prismicio/client": "^7.12.0",
+    "@prismicio/vue": "^4.3.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.454.0",
@@ -23,6 +26,9 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2"
+    "@nuxtjs/prismic": "^3.4.3",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@slicemachine/adapter-nuxt": "^0.3.57",
+    "slice-machine-ui": "^2.10.3"
   }
 }

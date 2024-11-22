@@ -6,10 +6,10 @@
       <h1
         class="text-[48px] leading-[58px] font-semibold font-roobert-semibold"
       >
-        Simplified Payments For Your Business
+        {{ slice.primary.title }}
       </h1>
       <p class="text-muted-foreground font-light text-xl mt-6">
-        RedStone makes payment collection and settlement simple and reliable.
+        {{ slice.primary.subtitle }}
       </p>
       <div
         class="flex gap-x-4 justify-center md:justify-start items-center mt-10"
@@ -19,7 +19,8 @@
     </div>
     <div class="grid place-items-center sm:min-w-[400px]">
       <NuxtImg
-        src="/images/Redstone-Dashboard.png"
+        v-if="slice.primary.hero_image.url"
+        :src="slice.primary.hero_image.url"
         class="h-full min-w-full object-contain"
       >
       </NuxtImg>
@@ -27,6 +28,16 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
+import type { Content } from "@prismicio/client";
 import Button from "@/components/shared/button.vue";
+
+defineProps(
+  getSliceComponentProps<Content.HeroSectionSlice>([
+    "slice",
+    "index",
+    "slices",
+    "context",
+  ])
+);
 </script>
