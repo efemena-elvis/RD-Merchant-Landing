@@ -30,7 +30,7 @@ build_production:
     - corepack enable
     - pnpm install --frozen-lockfile
   script:
-    - pnpm build
+    - pnpm generate
   artifacts:
     paths:
       - .output/public/
