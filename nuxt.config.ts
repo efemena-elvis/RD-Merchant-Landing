@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     endpoint: apiEndpoint || repositoryName,
   },
   routeRules: {
-    "/": { swr: 300 },
-    "/**": { swr: 300 },
+    "/": { swr: 30 },
+    "/**": { swr: 30 },
   },
 });
