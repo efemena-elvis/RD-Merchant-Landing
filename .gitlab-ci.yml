@@ -33,7 +33,7 @@ build_production:
     - pnpm build
   artifacts:
     paths:
-      - .output/public/
+      - .dist/
   only:
     - main
   needs:
