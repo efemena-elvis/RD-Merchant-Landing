@@ -10,15 +10,9 @@
 import { components } from "@/slices";
 
 const { client } = usePrismic();
-const { data } = await useAsyncData(
-  "home",
-  () => {
-    return client.getByUID("page", "homepage");
-  },
-  {
-    getCachedData: () => undefined,
-  }
-);
+const { data } = await useAsyncData("home", () => {
+  return client.getByUID("page", "homepage");
+});
 
 useSeoMeta({
   title: () => data.value?.data?.title ?? "",
