@@ -1,4 +1,4 @@
-import { repositoryName } from "./slicemachine.config.json";
+import { repositoryName, apiEndpoint } from "./slicemachine.config.json";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
@@ -28,6 +28,10 @@ export default defineNuxtConfig({
   css: ["~/assets/css/font.css"],
 
   prismic: {
-    endpoint: repositoryName,
+    endpoint: apiEndpoint || repositoryName,
+  },
+  routeRules: {
+    "/": { isr: 30 },
+    "/**": { isr: 30 },
   },
 });
