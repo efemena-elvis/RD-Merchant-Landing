@@ -2,7 +2,11 @@ import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 const config = {
   darkMode: ["class"],
-  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
+  content: [
+    "pages/**/*.{ts,tsx,vue}",
+    "components/**/*.{ts,tsx,vue}",
+    "slices/**/*.{ts,tsx,vue}",
+  ],
   theme: {
     container: {
       center: true,

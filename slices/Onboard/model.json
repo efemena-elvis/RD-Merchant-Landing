@@ -1,8 +1,8 @@
 {
-  "id": "hero_section",
+  "id": "onboard",
   "type": "SharedSlice",
-  "name": "HeroSection",
-  "description": "HeroSection",
+  "name": "Onboard",
+  "description": "Onboard",
   "variations": [
     {
       "id": "default",
@@ -28,18 +28,10 @@
             "placeholder": ""
           }
         },
-        "hero_image": {
-          "type": "Image",
-          "config": {
-            "label": "Hero Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "get_started_link": {
+        "onboarding_link": {
           "type": "Link",
           "config": {
-            "label": "Get Started Link",
+            "label": "Onboarding Link",
             "placeholder": "",
             "allowTargetBlank": true,
             "select": null,

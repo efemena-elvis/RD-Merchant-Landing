@@ -1,8 +1,8 @@
 {
-  "id": "hero_section",
+  "id": "tailored_payments",
   "type": "SharedSlice",
-  "name": "HeroSection",
-  "description": "HeroSection",
+  "name": "TailoredPayments",
+  "description": "TailoredPayments",
   "variations": [
     {
       "id": "default",
@@ -28,22 +28,12 @@
             "placeholder": ""
           }
         },
-        "hero_image": {
+        "image": {
           "type": "Image",
           "config": {
-            "label": "Hero Image",
+            "label": "Image",
             "constraint": {},
             "thumbnails": []
-          }
-        },
-        "get_started_link": {
-          "type": "Link",
-          "config": {
-            "label": "Get Started Link",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "select": null,
-            "allowText": true
           }
         }
       },

@@ -2,5 +2,6 @@
   "repositoryName": "redstone",
   "adapter": "@slicemachine/adapter-nuxt",
   "libraries": ["./slices"],
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "apiEndpoint": "https://redstone.cdn.prismic.io/api/v2"
 }

@@ -1,8 +1,8 @@
 {
-  "id": "hero_section",
+  "id": "integrate_us",
   "type": "SharedSlice",
-  "name": "HeroSection",
-  "description": "HeroSection",
+  "name": "IntegrateUs",
+  "description": "IntegrateUs",
   "variations": [
     {
       "id": "default",
@@ -18,7 +18,8 @@
             "label": "Title",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading1,strong,em"
+            "multi": "heading1,strong,em",
+            "labels": ["colored"]
           }
         },
         "subtitle": {
@@ -28,22 +29,22 @@
             "placeholder": ""
           }
         },
-        "hero_image": {
-          "type": "Image",
-          "config": {
-            "label": "Hero Image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "get_started_link": {
+        "documentation_link": {
           "type": "Link",
           "config": {
-            "label": "Get Started Link",
+            "label": "Documentation Link",
             "placeholder": "",
             "allowTargetBlank": true,
             "select": null,
             "allowText": true
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
           }
         }
       },

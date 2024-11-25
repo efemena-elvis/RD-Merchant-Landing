@@ -4,5 +4,20 @@ import { defineAsyncComponent } from "vue";
 import { defineSliceZoneComponents } from "@prismicio/vue";
 
 export const components = defineSliceZoneComponents({
+  custom_payments: defineAsyncComponent(
+    () => import("./CustomPayments/index.vue"),
+  ),
   hero_section: defineAsyncComponent(() => import("./HeroSection/index.vue")),
+  integrate_us: defineAsyncComponent(() => import("./IntegrateUs/index.vue")),
+  onboard: defineAsyncComponent(() => import("./Onboard/index.vue")),
+  payment_methods: defineAsyncComponent(
+    () => import("./PaymentMethods/index.vue"),
+  ),
+  seamless_payments: defineAsyncComponent(
+    () => import("./SeamlessPayments/index.vue"),
+  ),
+  tailored_payments: defineAsyncComponent(
+    () => import("./TailoredPayments/index.vue"),
+  ),
+  why_redstone: defineAsyncComponent(() => import("./WhyRedstone/index.vue")),
 });

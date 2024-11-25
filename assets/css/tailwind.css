@@ -64,10 +64,17 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 
   .container {
     @apply sm:!px-[var(--cp-md)] lg:!px-[var(--cp-lg)];
+  }
+
+  .heading h1,
+  .heading h1 span {
+    @apply text-[40px] leading-[48px] md:text-[48px] md:leading-[66px] font-roobert-semibold font-semibold;
   }
 }

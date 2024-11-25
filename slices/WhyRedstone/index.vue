@@ -7,16 +7,20 @@
         <div
           class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center ring-2 ring-[#D5DDDC]"
         >
-          <GuardIcon />
+          <PrismicImage
+            v-if="slice.primary?.options?.[0]?.icon?.url"
+            :field="slice.primary?.options[0]?.icon"
+          />
+          <GuardIcon v-else />
         </div>
         <div class="space-y-[24px]">
           <h4
             class="font-roobert-medium font-medium text-[32px] leading-[40px]"
           >
-            Fraud detection
+            {{ slice.primary?.options?.[0]?.title }}
           </h4>
           <p class="text-xl text-[#696F6E]">
-            Advanced fraud protection to safeguard your business.
+            {{ slice.primary?.options?.[0]?.subtitle }}
           </p>
         </div>
       </div>
@@ -24,13 +28,13 @@
         class="p-6 rounded-3xl bg-foreground relative lg:max-w-[360px] order-1 lg:order-2"
       >
         <div class="space-y-[32px]">
-          <h2
-            class="text-[38px] leading-[56px] lg:text-[48px] lg:leading-[66px] text-background"
-          >
-            Why Redstone is right for you
-          </h2>
+          <PrismicRichText
+            :field="slice.primary.title"
+            class="heading text-background"
+          />
+
           <p class="text-[#D5DDDC] text-[20px] lg:text-[24px] leading-[32px]">
-            We have become the best option for businesses just because we offer.
+            {{ slice.primary.subtitle }}
           </p>
         </div>
         <NuxtImg
@@ -39,37 +43,24 @@
         />
       </div>
       <div class="space-y-[69px] lg:space-y-[147px] order-3">
-        <div class="space-y-[32px] max-w-[297px]">
+        <div
+          class="space-y-[32px] max-w-[297px]"
+          v-for="option in slice.primary.options?.slice(1, 3)"
+        >
           <div
             class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center ring-2 ring-[#D5DDDC]"
           >
-            <WalletFlowIcon />
+            <PrismicImage :field="option.icon" v-if="option.icon.url" />
+            <GuardIcon v-else />
           </div>
           <div class="space-y-[24px]">
             <h4
               class="font-roobert-medium font-medium text-[32px] leading-[40px]"
             >
-              Flexible settlement
+              {{ option.title }}
             </h4>
             <p class="text-xl text-[#696F6E]">
-              Real-time settlements for improved cash flow.
-            </p>
-          </div>
-        </div>
-        <div class="space-y-[32px] max-w-[297px]">
-          <div
-            class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center ring-2 ring-[#D5DDDC]"
-          >
-            <LoopIcon />
-          </div>
-          <div class="space-y-[24px]">
-            <h4
-              class="font-roobert-medium font-medium text-[32px] leading-[40px]"
-            >
-              Seamless Reconciliation
-            </h4>
-            <p class="text-xl text-[#696F6E]">
-              Effortless reconciliation for accurate tracking.
+              {{ option.subtitle }}
             </p>
           </div>
         </div>
@@ -78,8 +69,15 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
+import type { Content } from "@prismicio/client";
 import GuardIcon from "@/assets/svgs/guard.svg";
-import WalletFlowIcon from "@/assets/svgs/wallet-flow.svg";
-import LoopIcon from "@/assets/svgs/loop.svg";
+defineProps(
+  getSliceComponentProps<Content.WhyRedstoneSlice>([
+    "slice",
+    "index",
+    "slices",
+    "context",
+  ])
+);
 </script>
