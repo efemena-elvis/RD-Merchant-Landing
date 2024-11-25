@@ -26,22 +26,29 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"get_started_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "DocumentLink",
-					"id": "mock_document_id"
-				}
-			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Simplified Payments For Your Business"
-			},
 			"subtitle": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",
 				"value": "RedStone makes payment collection and settlement simple and reliable."
+			},
+			"get_started_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "please"
+				}
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Setting"
+						}
+					}
+				]
 			}
 		},
 		"items": []

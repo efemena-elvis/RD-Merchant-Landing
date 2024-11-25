@@ -85,7 +85,15 @@ export type ButtonLinkDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = HeroSectionSlice;
+type PageDocumentDataSlicesSlice =
+  | TailoredPaymentsSlice
+  | WhyRedstoneSlice
+  | PaymentMethodsSlice
+  | OnboardSlice
+  | IntegrateUsSlice
+  | CustomPaymentsSlice
+  | SeamlessPaymentsSlice
+  | HeroSectionSlice;
 
 /**
  * Content for Page documents
@@ -151,18 +159,120 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = ButtonLinkDocument | PageDocument;
 
 /**
+ * Item in *CustomPayments → Default → Primary → Options*
+ */
+export interface CustomPaymentsSliceDefaultPrimaryOptionsItem {
+  /**
+   * Icon field in *CustomPayments → Default → Primary → Options*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: custom_payments.default.primary.options[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Title field in *CustomPayments → Default → Primary → Options*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: custom_payments.default.primary.options[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *CustomPayments → Default → Primary → Options*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: custom_payments.default.primary.options[].subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *CustomPayments → Default → Primary*
+ */
+export interface CustomPaymentsSliceDefaultPrimary {
+  /**
+   * Title field in *CustomPayments → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: custom_payments.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Subtitle field in *CustomPayments → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: custom_payments.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Options field in *CustomPayments → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: custom_payments.default.primary.options[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  options: prismic.GroupField<
+    Simplify<CustomPaymentsSliceDefaultPrimaryOptionsItem>
+  >;
+}
+
+/**
+ * Default variation for CustomPayments Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CustomPaymentsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CustomPaymentsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CustomPayments*
+ */
+type CustomPaymentsSliceVariation = CustomPaymentsSliceDefault;
+
+/**
+ * CustomPayments Shared Slice
+ *
+ * - **API ID**: `custom_payments`
+ * - **Description**: CustomPayments
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CustomPaymentsSlice = prismic.SharedSlice<
+  "custom_payments",
+  CustomPaymentsSliceVariation
+>;
+
+/**
  * Primary content in *HeroSection → Default → Primary*
  */
 export interface HeroSectionSliceDefaultPrimary {
   /**
    * Title field in *HeroSection → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: hero_section.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.KeyTextField;
+  title: prismic.RichTextField;
 
   /**
    * Subtitle field in *HeroSection → Default → Primary*
@@ -175,16 +285,6 @@ export interface HeroSectionSliceDefaultPrimary {
   subtitle: prismic.KeyTextField;
 
   /**
-   * Get Started Link field in *HeroSection → Default → Primary*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_section.default.primary.get_started_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  get_started_link: prismic.ContentRelationshipField<"button_link">;
-
-  /**
    * Hero Image field in *HeroSection → Default → Primary*
    *
    * - **Field Type**: Image
@@ -193,6 +293,16 @@ export interface HeroSectionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   hero_image: prismic.ImageField<never>;
+
+  /**
+   * Get Started Link field in *HeroSection → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_section.default.primary.get_started_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  get_started_link: prismic.LinkField;
 }
 
 /**
@@ -225,6 +335,470 @@ export type HeroSectionSlice = prismic.SharedSlice<
   HeroSectionSliceVariation
 >;
 
+/**
+ * Primary content in *IntegrateUs → Default → Primary*
+ */
+export interface IntegrateUsSliceDefaultPrimary {
+  /**
+   * Title field in *IntegrateUs → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: integrate_us.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Subtitle field in *IntegrateUs → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: integrate_us.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Documentation Link field in *IntegrateUs → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: integrate_us.default.primary.documentation_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  documentation_link: prismic.LinkField;
+
+  /**
+   * Image field in *IntegrateUs → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: integrate_us.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for IntegrateUs Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IntegrateUsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<IntegrateUsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *IntegrateUs*
+ */
+type IntegrateUsSliceVariation = IntegrateUsSliceDefault;
+
+/**
+ * IntegrateUs Shared Slice
+ *
+ * - **API ID**: `integrate_us`
+ * - **Description**: IntegrateUs
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type IntegrateUsSlice = prismic.SharedSlice<
+  "integrate_us",
+  IntegrateUsSliceVariation
+>;
+
+/**
+ * Primary content in *Onboard → Default → Primary*
+ */
+export interface OnboardSliceDefaultPrimary {
+  /**
+   * Title field in *Onboard → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: onboard.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Subtitle field in *Onboard → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: onboard.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Onboarding Link field in *Onboard → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: onboard.default.primary.onboarding_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  onboarding_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Onboard Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OnboardSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<OnboardSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Onboard*
+ */
+type OnboardSliceVariation = OnboardSliceDefault;
+
+/**
+ * Onboard Shared Slice
+ *
+ * - **API ID**: `onboard`
+ * - **Description**: Onboard
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OnboardSlice = prismic.SharedSlice<
+  "onboard",
+  OnboardSliceVariation
+>;
+
+/**
+ * Item in *PaymentMethods → Default → Primary → Options*
+ */
+export interface PaymentMethodsSliceDefaultPrimaryOptionsItem {
+  /**
+   * Icon field in *PaymentMethods → Default → Primary → Options*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: payment_methods.default.primary.options[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Title field in *PaymentMethods → Default → Primary → Options*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: payment_methods.default.primary.options[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *PaymentMethods → Default → Primary → Options*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: payment_methods.default.primary.options[].subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *PaymentMethods → Default → Primary*
+ */
+export interface PaymentMethodsSliceDefaultPrimary {
+  /**
+   * Title field in *PaymentMethods → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: payment_methods.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Options field in *PaymentMethods → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: payment_methods.default.primary.options[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  options: prismic.GroupField<
+    Simplify<PaymentMethodsSliceDefaultPrimaryOptionsItem>
+  >;
+}
+
+/**
+ * Default variation for PaymentMethods Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PaymentMethodsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PaymentMethodsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PaymentMethods*
+ */
+type PaymentMethodsSliceVariation = PaymentMethodsSliceDefault;
+
+/**
+ * PaymentMethods Shared Slice
+ *
+ * - **API ID**: `payment_methods`
+ * - **Description**: PaymentMethods
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PaymentMethodsSlice = prismic.SharedSlice<
+  "payment_methods",
+  PaymentMethodsSliceVariation
+>;
+
+/**
+ * Primary content in *SeamlessPayments → Default → Primary*
+ */
+export interface SeamlessPaymentsSliceDefaultPrimary {
+  /**
+   * Title field in *SeamlessPayments → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: seamless_payments.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * subtitle field in *SeamlessPayments → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: seamless_payments.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Image field in *SeamlessPayments → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: seamless_payments.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for SeamlessPayments Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SeamlessPaymentsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SeamlessPaymentsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SeamlessPayments*
+ */
+type SeamlessPaymentsSliceVariation = SeamlessPaymentsSliceDefault;
+
+/**
+ * SeamlessPayments Shared Slice
+ *
+ * - **API ID**: `seamless_payments`
+ * - **Description**: SeamlessPayments
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SeamlessPaymentsSlice = prismic.SharedSlice<
+  "seamless_payments",
+  SeamlessPaymentsSliceVariation
+>;
+
+/**
+ * Primary content in *TailoredPayments → Default → Primary*
+ */
+export interface TailoredPaymentsSliceDefaultPrimary {
+  /**
+   * Title field in *TailoredPayments → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tailored_payments.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Subtitle field in *TailoredPayments → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tailored_payments.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Image field in *TailoredPayments → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: tailored_payments.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for TailoredPayments Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TailoredPaymentsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TailoredPaymentsSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TailoredPayments*
+ */
+type TailoredPaymentsSliceVariation = TailoredPaymentsSliceDefault;
+
+/**
+ * TailoredPayments Shared Slice
+ *
+ * - **API ID**: `tailored_payments`
+ * - **Description**: TailoredPayments
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TailoredPaymentsSlice = prismic.SharedSlice<
+  "tailored_payments",
+  TailoredPaymentsSliceVariation
+>;
+
+/**
+ * Item in *WhyRedstone → Default → Primary → Options*
+ */
+export interface WhyRedstoneSliceDefaultPrimaryOptionsItem {
+  /**
+   * Icon field in *WhyRedstone → Default → Primary → Options*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_redstone.default.primary.options[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Title field in *WhyRedstone → Default → Primary → Options*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_redstone.default.primary.options[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *WhyRedstone → Default → Primary → Options*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_redstone.default.primary.options[].subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *WhyRedstone → Default → Primary*
+ */
+export interface WhyRedstoneSliceDefaultPrimary {
+  /**
+   * Title field in *WhyRedstone → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_redstone.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Subtitle field in *WhyRedstone → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_redstone.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Options field in *WhyRedstone → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_redstone.default.primary.options[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  options: prismic.GroupField<
+    Simplify<WhyRedstoneSliceDefaultPrimaryOptionsItem>
+  >;
+}
+
+/**
+ * Default variation for WhyRedstone Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WhyRedstoneSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<WhyRedstoneSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *WhyRedstone*
+ */
+type WhyRedstoneSliceVariation = WhyRedstoneSliceDefault;
+
+/**
+ * WhyRedstone Shared Slice
+ *
+ * - **API ID**: `why_redstone`
+ * - **Description**: WhyRedstone
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WhyRedstoneSlice = prismic.SharedSlice<
+  "why_redstone",
+  WhyRedstoneSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -252,10 +826,41 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      CustomPaymentsSlice,
+      CustomPaymentsSliceDefaultPrimaryOptionsItem,
+      CustomPaymentsSliceDefaultPrimary,
+      CustomPaymentsSliceVariation,
+      CustomPaymentsSliceDefault,
       HeroSectionSlice,
       HeroSectionSliceDefaultPrimary,
       HeroSectionSliceVariation,
       HeroSectionSliceDefault,
+      IntegrateUsSlice,
+      IntegrateUsSliceDefaultPrimary,
+      IntegrateUsSliceVariation,
+      IntegrateUsSliceDefault,
+      OnboardSlice,
+      OnboardSliceDefaultPrimary,
+      OnboardSliceVariation,
+      OnboardSliceDefault,
+      PaymentMethodsSlice,
+      PaymentMethodsSliceDefaultPrimaryOptionsItem,
+      PaymentMethodsSliceDefaultPrimary,
+      PaymentMethodsSliceVariation,
+      PaymentMethodsSliceDefault,
+      SeamlessPaymentsSlice,
+      SeamlessPaymentsSliceDefaultPrimary,
+      SeamlessPaymentsSliceVariation,
+      SeamlessPaymentsSliceDefault,
+      TailoredPaymentsSlice,
+      TailoredPaymentsSliceDefaultPrimary,
+      TailoredPaymentsSliceVariation,
+      TailoredPaymentsSliceDefault,
+      WhyRedstoneSlice,
+      WhyRedstoneSliceDefaultPrimaryOptionsItem,
+      WhyRedstoneSliceDefaultPrimary,
+      WhyRedstoneSliceVariation,
+      WhyRedstoneSliceDefault,
     };
   }
 }

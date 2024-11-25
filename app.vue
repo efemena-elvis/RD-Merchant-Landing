@@ -1,5 +1,6 @@
 <template>
   <div>
+    <NuxtLoadingIndicator />
     <div class="fixed left-0 right-0 bg-background z-50">
       <Navigation />
     </div>

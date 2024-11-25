@@ -38,6 +38,27 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "tailored_payments": {
+              "type": "SharedSlice"
+            },
+            "why_redstone": {
+              "type": "SharedSlice"
+            },
+            "payment_methods": {
+              "type": "SharedSlice"
+            },
+            "onboard": {
+              "type": "SharedSlice"
+            },
+            "integrate_us": {
+              "type": "SharedSlice"
+            },
+            "custom_payments": {
+              "type": "SharedSlice"
+            },
+            "seamless_payments": {
+              "type": "SharedSlice"
+            },
             "hero_section": {
               "type": "SharedSlice"
             }

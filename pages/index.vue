@@ -1,14 +1,18 @@
 <template>
-  <div>
-    <Hero />
+  <SliceZone
+    :slices="data?.data.slices ?? []"
+    wrapper="main"
+    :components="components"
+  />
+
+  <!-- <Hero />
     <SeamlessPayment />
     <BusinessPayment />
     <CustomPayments />
     <PaymentMethods />
     <Features />
     <Integration />
-    <Onboard />
-  </div>
+    <Onboard /> -->
 </template>
 
 <script lang="ts" setup>
@@ -20,8 +24,14 @@ import PaymentMethods from "@/components/sections/payment-methods.vue";
 import Features from "@/components/sections/features.vue";
 import Integration from "@/components/sections/integration.vue";
 import Onboard from "@/components/sections/onboard.vue";
+import { components } from "@/slices";
+
+const { client } = usePrismic();
+const { data } = await useAsyncData("home", () => {
+  return client.getByUID("page", "homepage");
+});
 
 useSeoMeta({
-  title: "Payment platform for businesses",
+  title: () => data.value?.data?.title ?? "",
 });
 </script>
