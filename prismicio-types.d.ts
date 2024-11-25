@@ -100,39 +100,6 @@ type PageDocumentDataSlicesSlice =
  */
 interface PageDocumentData {
   /**
-   * Title field in *Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Enter the page title
-   * - **API ID Path**: page.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Meta Title field in *Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Enter SEO meta title
-   * - **API ID Path**: page.meta_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Enter SEO meta description
-   * - **API ID Path**: page.meta_description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
    * Slice Zone field in *Page*
    *
    * - **Field Type**: Slice Zone
@@ -141,7 +108,71 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+   * Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.title
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  title: prismic.KeyTextField;
+
+  /**
+   * Meta Title field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_title
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_description
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Keywords field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.meta_keywords
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_keywords: prismic.KeyTextField;
+
+  /**
+   * OG Image field in *Page*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.og_image
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  og_image: prismic.ImageField<never>;
+
+  /**
+   * OG Site Name field in *Page*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: page.og_site_name
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  og_site_name: prismic.KeyTextField;
 }
 
 /**
