@@ -27,7 +27,17 @@
         Developers
       </NuxtLink>
 
-      <NuxtLink to="/">
+      <PrismicLink :field="data?.data.login_link" v-if="data?.data.login_link">
+        <Button :variant="'outline'" class="!h-[36px]">
+          {{ data.data.login_link.text }}
+        </Button>
+      </PrismicLink>
+      <NuxtLink
+        to="https://merchant.redstonepgs.com/login"
+        v-else
+        external
+        target="_blank"
+      >
         <Button :variant="'outline'" class="!h-[36px]"> Login </Button>
       </NuxtLink>
     </nav>
@@ -38,11 +48,12 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
 import RedStoneIcon from "@/assets/svgs/redstone.svg";
 import Button from "@/components/shared/button.vue";
 import MenuIcon from "@/assets/svgs/menu.svg";
+const { client } = usePrismic();
 
-const route = useRoute();
-const currentHash = computed(() => route.hash);
+const { data } = await useAsyncData("home", () => {
+  return client.getSingle("header");
+});
 </script>

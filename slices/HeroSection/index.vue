@@ -11,9 +11,9 @@
       <div
         class="flex gap-x-4 justify-center md:justify-start items-center mt-10"
       >
-        <NuxtLink :to="asLink(slice.primary.get_started_link) ?? '/'">
+        <PrismicLink :field="slice.primary.get_started_link">
           <Button> {{ slice.primary.get_started_link.text }} </Button>
-        </NuxtLink>
+        </PrismicLink>
       </div>
     </div>
     <div class="grid place-items-center sm:min-w-[400px]">
