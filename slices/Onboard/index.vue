@@ -14,12 +14,12 @@
         >
           {{ slice.primary.subtitle }}
         </p>
-        <NuxtLink
-          :to="asLink(slice.primary.onboarding_link) ?? '/'"
+        <PrismicLink
+          :field="slice.primary.onboarding_link"
           class="mx-auto !block"
         >
-          <Button> Get started </Button>
-        </NuxtLink>
+          <Button> {{ slice.primary.onboarding_link.text }} </Button>
+        </PrismicLink>
       </div>
     </div>
   </div>
