@@ -7,11 +7,11 @@
         <p class="text-[#696F6E] text-xl mt-[24px] mb-[32px]">
           {{ slice.primary.subtitle }}
         </p>
-        <NuxtLink :to="asLink(slice.primary.documentation_link) ?? '/'">
+        <PrismicLink :field="slice.primary.documentation_link">
           <Button :variant="'secondary'">
             {{ slice.primary.documentation_link.text }}
           </Button>
-        </NuxtLink>
+        </PrismicLink>
       </div>
       <div class="aspect-[1.42]">
         <PrismicImage
@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Content, asLink } from "@prismicio/client";
+import type { Content } from "@prismicio/client";
 import Button from "@/components/shared/button.vue";
 defineProps(
   getSliceComponentProps<Content.IntegrateUsSlice>([

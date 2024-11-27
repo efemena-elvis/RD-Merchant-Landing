@@ -85,6 +85,38 @@ export type ButtonLinkDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Content for Header documents
+ */
+interface HeaderDocumentData {
+  /**
+   * Login Link field in *Header*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.login_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  login_link: prismic.LinkField;
+}
+
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<HeaderDocumentData>,
+    "header",
+    Lang
+  >;
+
 type PageDocumentDataSlicesSlice =
   | TailoredPaymentsSlice
   | WhyRedstoneSlice
@@ -198,7 +230,10 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = ButtonLinkDocument | PageDocument;
+export type AllDocumentTypes =
+  | ButtonLinkDocument
+  | HeaderDocument
+  | PageDocument;
 
 /**
  * Item in *CustomPayments → Default → Primary → Options*
@@ -864,6 +899,8 @@ declare module "@prismicio/client" {
     export type {
       ButtonLinkDocument,
       ButtonLinkDocumentData,
+      HeaderDocument,
+      HeaderDocumentData,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
