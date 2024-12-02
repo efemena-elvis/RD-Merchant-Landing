@@ -29,6 +29,9 @@ importers:
       nuxt:
         specifier: ^3.13.2
         version: 3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.9.1)(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.27.3)(terser@5.36.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.9.1)(terser@5.36.0))
+      nuxt-jsonld:
+        specifier: ^2.1.0
+        version: 2.1.0(typescript@5.7.2)
       nuxt-svgo-loader:
         specifier: ^0.4.1
         version: 0.4.1(magicast@0.3.5)(rollup@4.27.3)(vite@5.4.11(@types/node@22.9.1)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2))
@@ -2832,6 +2835,9 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
 
+  nuxt-jsonld@2.1.0:
+    resolution: {integrity: sha512-DN737T3t/xzI+NP0Fwyet3Bm94fn7m9TIQMIgBcBzLxg/eszQSgxXVXzumcuCiX5VA4mVoBHyGjgbIwMzS1H2w==}
+
   nuxt-svgo-loader@0.4.1:
     resolution: {integrity: sha512-3G1kbr8+LEz1PMfMiJA/8RYJwtL/TvBRm9na3pskDD41l7ebX3l71oyRzhI0zGtvWEzmpQEagI7yJY4E9EqmHg==}
 
@@ -3433,6 +3439,11 @@ packages:
 
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+
+  schema-dts@1.1.2:
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
 
   scule@1.3.0:
     resolution: {integrity: sha512-6FtHJEvt+pVMIB9IBY+IcCJ6Z5f1iQnytgyfKMhDKgmzYG+TeH/wx1y3l27rshSbLiSanrR9ffZDrEsmjlQF2g==}
@@ -7299,6 +7310,13 @@ snapshots:
 
   nuxi@3.15.0: {}
 
+  nuxt-jsonld@2.1.0(typescript@5.7.2):
+    dependencies:
+      pathe: 1.1.2
+      schema-dts: 1.1.2(typescript@5.7.2)
+    transitivePeerDependencies:
+      - typescript
+
   nuxt-svgo-loader@0.4.1(magicast@0.3.5)(rollup@4.27.3)(vite@5.4.11(@types/node@22.9.1)(terser@5.36.0))(vue@3.5.13(typescript@5.7.2)):
     dependencies:
       '@nuxt/devtools-kit': 1.6.1(magicast@0.3.5)(rollup@4.27.3)(vite@5.4.11(@types/node@22.9.1)(terser@5.36.0))
@@ -8028,6 +8046,10 @@ snapshots:
   scheduler@0.23.2:
     dependencies:
       loose-envify: 1.4.0
+
+  schema-dts@1.1.2(typescript@5.7.2):
+    dependencies:
+      typescript: 5.7.2
 
   scule@1.3.0: {}
 
