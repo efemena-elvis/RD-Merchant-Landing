@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     "nuxt-svgo-loader",
     "@nuxt/image",
     "@nuxtjs/prismic",
+    "nuxt-jsonld",
   ],
 
   css: ["~/assets/css/font.css"],
