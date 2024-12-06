@@ -53,7 +53,7 @@ import Button from "@/components/shared/button.vue";
 import MenuIcon from "@/assets/svgs/menu.svg";
 const { client } = usePrismic();
 
-const { data } = await useAsyncData("home", () => {
+const { data } = await useAsyncData("header", () => {
   return client.getSingle("header");
 });
 </script>
