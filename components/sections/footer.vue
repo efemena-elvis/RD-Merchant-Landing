@@ -12,28 +12,26 @@
         class="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-[50px] my-10"
       >
         <div class="space-y-6">
-          <p class="text-muted-foreground">support@redstonepgs.com</p>
+          <a
+            class="text-muted-foreground"
+            v-for="(email, i) in supportEmails"
+            :key="i"
+            :href="`mailto:${email.email_address}`"
+            >{{ email.email_address }}</a
+          >
           <div class="flex items-center gap-x-4">
-            <div
+            <PrismicLink
+              v-for="(link, i) in socialLinks"
+              :field="link.link"
+              :key="link.icon.url ?? i"
               class="size-[48px] hover:bg-muted/50 cursor-pointer transition-colors rounded-full border grid place-items-center"
             >
-              <InstagramIcon />
-            </div>
-            <div
-              class="size-[48px] hover:bg-muted/50 cursor-pointer transition-colors rounded-full border grid place-items-center"
-            >
-              <FacebookIcon />
-            </div>
-            <div
-              class="size-[48px] hover:bg-muted/50 cursor-pointer transition-colors rounded-full border grid place-items-center"
-            >
-              <TwitterIcon />
-            </div>
-            <div
-              class="size-[48px] hover:bg-muted/50 cursor-pointer transition-colors rounded-full border grid place-items-center"
-            >
-              <LinkedinIcon />
-            </div>
+              <PrismicImage
+                :field="link.icon"
+                v-if="link.icon.url"
+                class="max-w-full max-h-full"
+              />
+            </PrismicLink>
           </div>
         </div>
         <div class="space-y-6">
@@ -54,8 +52,12 @@
         <div class="space-y-6">
           <div class="">Company</div>
           <p class="text-muted-foreground">Contact</p>
-          <p class="text-muted-foreground">
-            4 Bishops Rd, Kabulonga Lusaka, Zambia
+          <p
+            class="text-muted-foreground"
+            v-for="(address, index) in officeAdresses"
+            :key="index"
+          >
+            {{ address.address }}
           </p>
         </div>
       </div>
@@ -64,15 +66,35 @@
     <div
       class="px-6 py-4 flex justify-center items-center text-[#C1C9C8] border-t"
     >
-      <div>Copyright {{ new Date().getFullYear() }}. Red Stone Zambia Ltd.</div>
+      <div>{{ copyright }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import RedStoneIcon from "@/assets/svgs/redstone.svg";
-import FacebookIcon from "@/assets/svgs/facebook.svg";
-import TwitterIcon from "@/assets/svgs/twitter.svg";
-import LinkedinIcon from "@/assets/svgs/linkedin.svg";
-import InstagramIcon from "@/assets/svgs/instagram.svg";
+
+const { client } = usePrismic();
+const { data } = await useAsyncData("footer", () => {
+  return client.getSingle("footer");
+});
+
+const supportEmails = computed(() => {
+  return data.value?.data?.support_emails ?? [];
+});
+
+const socialLinks = computed(() => {
+  return data.value?.data?.social_links ?? [];
+});
+
+const officeAdresses = computed(() => {
+  return data.value?.data?.office_addresses ?? [];
+});
+
+const copyright = computed(() => {
+  const cms_copy_right = data.value?.data?.copyright ?? "";
+  return cms_copy_right
+    ? cms_copy_right.replace("{{year}}", `${new Date().getFullYear()}`)
+    : "";
+});
 </script>

@@ -86,6 +86,130 @@ export type ButtonLinkDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Footer → Support Emails*
+ */
+export interface FooterDocumentDataSupportEmailsItem {
+  /**
+   * Email Address field in *Footer → Support Emails*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.support_emails[].email_address
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email_address: prismic.KeyTextField;
+}
+
+/**
+ * Item in *Footer → Social Links*
+ */
+export interface FooterDocumentDataSocialLinksItem {
+  /**
+   * Icon field in *Footer → Social Links*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * Link field in *Footer → Social Links*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Item in *Footer → Office addresses*
+ */
+export interface FooterDocumentDataOfficeAddressesItem {
+  /**
+   * Address field in *Footer → Office addresses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.office_addresses[].address
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Support Emails field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.support_emails[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  support_emails: prismic.GroupField<
+    Simplify<FooterDocumentDataSupportEmailsItem>
+  >;
+
+  /**
+   * Social Links field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.social_links[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  social_links: prismic.GroupField<Simplify<FooterDocumentDataSocialLinksItem>>;
+
+  /**
+   * Office addresses field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.office_addresses[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  office_addresses: prismic.GroupField<
+    Simplify<FooterDocumentDataOfficeAddressesItem>
+  >;
+
+  /**
+   * Copyright field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.copyright
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  copyright: prismic.KeyTextField;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
+/**
  * Content for Header documents
  */
 interface HeaderDocumentData {
@@ -232,6 +356,7 @@ export type PageDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | ButtonLinkDocument
+  | FooterDocument
   | HeaderDocument
   | PageDocument;
 
@@ -899,6 +1024,11 @@ declare module "@prismicio/client" {
     export type {
       ButtonLinkDocument,
       ButtonLinkDocumentData,
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataSupportEmailsItem,
+      FooterDocumentDataSocialLinksItem,
+      FooterDocumentDataOfficeAddressesItem,
       HeaderDocument,
       HeaderDocumentData,
       PageDocument,
