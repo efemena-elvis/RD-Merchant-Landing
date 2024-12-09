@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background py-[100px] md:py-[170px]">
+  <div class="bg-background py-[100px] md:pt-[170px] md:pb-[50px]">
     <div class="container">
       <div
         class="bg-foreground text-background text-center px-[30px] md:px-[50px] py-[31px] md:py-[41px] rounded-3xl relative"
