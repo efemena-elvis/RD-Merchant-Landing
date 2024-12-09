@@ -1,5 +1,5 @@
 <template>
-  <div class="py-[100px] md:py-[200px]">
+  <div class="py-[100px] md:py-[160px]">
     <div class="container">
       <div
         class="grid md:grid-cols-[auto,_1fr] items-center gap-[55px] lg:gap-[85px] bg-gradient-to-r from-[#F5F6F7] via-[#EBF6F9] to-[#F5F6F7] rounded-[28px] p-6 md:p-10"

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background py-20 scroll-mt-[70px]" id="why-redstone">
+  <div class="bg-background py-[160px] scroll-mt-[70px]" id="why-redstone">
     <div
       class="container flex flex-col lg:flex-row gap-[69px] lg:gap-[59px] md:items-stretch md:justify-between"
     >

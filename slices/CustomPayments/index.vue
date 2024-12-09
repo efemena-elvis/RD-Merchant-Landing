@@ -6,7 +6,7 @@
     <div class="container">
       <div class="space-y-6 max-w-[835px]">
         <PrismicRichText :field="slice.primary.title" class="heading" />
-        <p class="text-xl text-muted-foreground">
+        <p class="text-xl text-[#696F6E]">
           {{ slice.primary.subtitle }}
         </p>
       </div>
@@ -14,7 +14,7 @@
         class="mt-[70px] grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-[50px]"
       >
         <div
-          class="space-y-[70px]"
+          class="space-y-[30px]"
           v-for="option in slice.primary.options ?? []"
           :key="option.title ?? 'key'"
         >
@@ -32,7 +32,7 @@
             <h3 class="font-roobert-semibold font-semibold text-2xl">
               {{ option.title }}
             </h3>
-            <p class="text-xl text-muted-foreground">
+            <p class="text-xl text-[#696F6E]">
               {{ option.subtitle }}
             </p>
           </div>
