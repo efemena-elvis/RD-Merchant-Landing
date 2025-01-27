@@ -24,6 +24,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/prismic",
     "nuxt-jsonld",
+    "nuxt-gtag",
   ],
 
   css: ["~/assets/css/font.css"],
@@ -35,4 +36,7 @@ export default defineNuxtConfig({
     "/": { swr: 30 },
     "/**": { swr: 30 },
   },
+  gtag: {
+    id: 'G-78C2NPQCD1'
+  }
 });

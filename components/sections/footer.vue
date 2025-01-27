@@ -48,6 +48,14 @@
           >
             Terms of use
           </NuxtLink>
+          <NuxtLink
+            class="text-muted-foreground block hover:text-primary transition-colors hover:underline"
+            to="https://notion-blog-orpin-two.vercel.app"
+            external
+            target="_blank"
+          >
+            Blog
+          </NuxtLink>
         </div>
         <div class="space-y-6">
           <div class="">Company</div>
