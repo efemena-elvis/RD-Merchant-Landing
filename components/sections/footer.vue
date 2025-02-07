@@ -38,6 +38,12 @@
           <div class="">Product</div>
           <NuxtLink
             class="text-muted-foreground block hover:text-primary transition-colors hover:underline"
+            to="/storefront"
+          >
+            Storefront
+          </NuxtLink>
+          <NuxtLink
+            class="text-muted-foreground block hover:text-primary transition-colors hover:underline"
             to="/privacy-policy"
           >
             Privacy poilcy

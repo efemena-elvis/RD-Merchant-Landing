@@ -15,6 +15,12 @@
         Payments
       </NuxtLink>
       <NuxtLink
+        to="/storefront"
+        class="text-[14px] leading-[20px] text-[#525857] hover:text-primary transition-colors"
+      >
+        Storefront
+      </NuxtLink>
+      <NuxtLink
         to="/#why-redstone"
         class="text-[14px] leading-[20px] text-[#525857] hover:text-primary transition-colors"
       >
