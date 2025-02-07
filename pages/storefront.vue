@@ -12,7 +12,7 @@
 
         <p class="text-muted-foreground font-light text-xl mt-6">
           Easily build your store, attract customers, process payments, and
-          scale your business.
+          scale your business
         </p>
 
         <NuxtLink
@@ -25,8 +25,8 @@
         </NuxtLink>
       </div>
       <div class="w-full sm:w-[472px] aspect-square">
-        <NuxtImg src="/images/shop.png" class="h-full w-full object-contain">
-        </NuxtImg>
+        <!-- <NuxtImg src="/images/shop.png" class="h-full w-full object-contain">
+        </NuxtImg> -->
       </div>
     </div>
 
