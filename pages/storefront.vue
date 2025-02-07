@@ -25,8 +25,8 @@
         </NuxtLink>
       </div>
       <div class="w-full sm:w-[472px] aspect-square">
-        <!-- <NuxtImg src="/images/shop.png" class="h-full w-full object-contain">
-        </NuxtImg> -->
+        <NuxtImg src="/images/shop.png" class="h-full w-full object-contain">
+        </NuxtImg>
       </div>
     </div>
 
