@@ -32,11 +32,7 @@ export default defineNuxtConfig({
   prismic: {
     endpoint: apiEndpoint || repositoryName,
   },
-  routeRules: {
-    "/": { swr: 30 },
-    "/**": { swr: 30 },
-  },
   gtag: {
-    id: 'G-78C2NPQCD1'
-  }
+    id: "G-78C2NPQCD1",
+  },
 });
