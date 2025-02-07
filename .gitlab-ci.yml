@@ -28,7 +28,7 @@ build_production:
   stage: build
   before_script:
     - corepack enable
-    - pnpm install
+    - pnpm install --frozen-lockfile
   script:
     - pnpm generate
   artifacts:
