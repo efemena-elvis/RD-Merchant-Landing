@@ -26,9 +26,10 @@ install:
 # Job for building on production environment (Static Site)
 build_production:
   stage: build
-  # before_script:
-  #   - corepack enable
-  #   - pnpm install --frozen-lockfile
+  before_script:
+    - corepack enable
+    # - pnpm install --frozen-lockfile
+    - corepack prepare pnpm@latest-9 --activate
   script:
     - pnpm generate
   artifacts:
