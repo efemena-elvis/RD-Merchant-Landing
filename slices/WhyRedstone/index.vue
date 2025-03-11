@@ -44,8 +44,9 @@
       </div>
       <div class="space-y-[69px] lg:space-y-[147px] order-3">
         <div
+        :key = "index"
           class="space-y-[32px] max-w-[297px]"
-          v-for="option in slice.primary.options?.slice(1, 3)"
+          v-for="(option, index) in slice.primary.options?.slice(1, 3)"
         >
           <div
             class="size-[70px] rounded-full bg-[#E5EDEB] grid place-items-center ring-2 ring-[#D5DDDC]"

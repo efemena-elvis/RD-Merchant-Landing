@@ -46,20 +46,41 @@
       >
         <Button :variant="'outline'" class="!h-[36px]"> Login </Button>
       </NuxtLink>
+   
     </nav>
-    <Button :variant="'ghost'" :size="'icon'" class="md:hidden">
-      <MenuIcon />
+    <MobileMenu :isMenuOpen="menuState" @closeMenu = "isMenuOpen = false"/>
+    <Button
+      :variant="'ghost'"
+      :size="'icon'"
+      v-if="isMenuOpen"
+      class="md:hidden"
+    >
+      <CloseIcon @click="toggleMenu" />
     </Button>
+    <Button v-else :variant="'ghost'" :size="'icon'" class="md:hidden">
+      <MenuIcon @click="toggleMenu" />
+    </Button>
+
   </header>
 </template>
 
 <script lang="ts" setup>
+import { computed } from "vue";
+import MobileMenu from "./mobile-menu.vue";
 import RedStoneIcon from "@/assets/svgs/redstone.svg";
 import Button from "@/components/shared/button.vue";
 import MenuIcon from "@/assets/svgs/menu.svg";
+import CloseIcon from "@/assets/svgs/close.svg";
+
 const { client } = usePrismic();
 
 const { data } = await useAsyncData("header", () => {
   return client.getSingle("header");
 });
+
+const isMenuOpen = useState<boolean>("isMenuOpen", () => false);
+  const menuState = computed(() => isMenuOpen.value);
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 </script>
