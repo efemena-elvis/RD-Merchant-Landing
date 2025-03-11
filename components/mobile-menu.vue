@@ -12,16 +12,19 @@
     </NuxtLink>
     <nav class="flex justify-center flex-col gap-[12px] mt-12">
       <NuxtLink
-      v-for = "(item, index) in menuList"
-      :key = "index"
+        v-for="(item, index) in menuList"
+        :key="index"
         @click="handleMenuClick(item.label)"
         :to="item.link"
-        class="text-[14px] leading-[20px] rounded-r-md p-3   hover:text-[#3ab65d] w-full transition-colors"
-        :class = "item.label === activeMenu ? 'bg-[#3ab65d] text-white' : 'bg-none text-[#1f3541]'"
+        class="text-[14px] leading-[20px] rounded-r-md p-3 hover:text-[#3ab65d] w-full transition-colors"
+        :class="
+          item.label === activeMenu
+            ? 'bg-[#3ab65d] text-white'
+            : 'bg-none text-[#1f3541]'
+        "
       >
-      {{item.label}}
+        {{ item.label }}
       </NuxtLink>
-  
 
       <PrismicLink :field="data?.data.login_link" v-if="data?.data.login_link">
         <Button :variant="'outline'" class="!h-[36px]">
@@ -46,8 +49,15 @@
 </template>
 
 <script setup>
+import { useState } from "nuxt/app";
 import RedStoneIcon from "@/assets/svgs/redstone.svg";
-const menuList = useState("menuList", () => [{label: "Payments", link: "/#payments"}, {label: "Storefront", link: "/storefront"}, {label: "Why Redstone", link: "/#why-redstone"}, {label: "Developers", link: "/#developers"}])
+
+const menuList = useState("menuList", () => [
+  { label: "Payments", link: "/#payments" },
+  { label: "Storefront", link: "/storefront" },
+  { label: "Why Redstone", link: "/#why-redstone" },
+  { label: "Developers", link: "/#developers" },
+]);
 const activeMenu = useState("activeMenu", () => "Payments");
 
 defineProps({
