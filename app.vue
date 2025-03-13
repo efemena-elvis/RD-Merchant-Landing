@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts" setup>
+import Navigation from "./components/navigation.vue";
 import Footer from "@/components/sections/footer.vue";
 
 const { client } = usePrismic();
