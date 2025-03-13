@@ -53,12 +53,13 @@
       :variant="'ghost'"
       :size="'icon'"
       v-if="isMenuOpen"
+      @click="toggleMenu"
       class="md:hidden"
     >
-      <CloseIcon @click="toggleMenu" />
+      <X class = "text-muted-foreground" />
     </Button>
-    <Button v-else :variant="'ghost'" :size="'icon'" class="md:hidden">
-      <MenuIcon @click="toggleMenu" />
+    <Button v-else  @click="toggleMenu"  :variant="'ghost'" :size="'icon'" class="md:hidden">
+      <MenuIcon />
     </Button>
 
   </header>
@@ -70,7 +71,8 @@ import MobileMenu from "./mobile-menu.vue";
 import RedStoneIcon from "@/assets/svgs/redstone.svg";
 import Button from "@/components/shared/button.vue";
 import MenuIcon from "@/assets/svgs/menu.svg";
-import CloseIcon from "@/assets/svgs/close.svg";
+import {X} from "lucide-vue-next"
+
 
 const { client } = usePrismic();
 
