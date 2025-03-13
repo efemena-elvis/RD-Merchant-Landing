@@ -70,6 +70,12 @@ const handleMenuClick = (label) => {
   activeMenu.value = label;
   emit("closeMenu");
 };
+
+const { client } = usePrismic();
+
+const { data } = await useAsyncData("header", () => {
+  return client.getSingle("header");
+});
 </script>
 
 <style lang="scss" scoped></style>
